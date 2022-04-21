@@ -47,27 +47,12 @@ def display_score(score):
     display=score_font.render("Score: "+ str(score),True, (255,255,255))
     screen.blit(display, (15,15))
 
-# START SCREEN
-startFont = pygame.font.SysFont('impact', 30)
-def start():
-    # displays: "press space bar to start)
-    start_disp = startFont.render(f"PRESS SPACE BAR TO START", True, (255, 255, 255))
-    screen.blit(start_disp, (50, 350))
-    pygame.display.update()
-
 running= True
 
 while running:
     screen.fill((0,0,0))
     screen.blit(bg_image, (0,0))
     clock.tick(200)
-
-#while waiting:
- #   if collision:
-  #      display_gameover()
-   #     start()
-    #else:
-     #   start()
 
     for event in pygame.event.get():
         #for every event in pygame
